@@ -1,4 +1,5 @@
 require 'mongoid/relations'
+require "mongoid/criteria/queryable/key"
 module Mongoid
   module Matchers
     module Associations
