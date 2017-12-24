@@ -16,7 +16,7 @@ require 'rspec/expectations'
 require 'mongoid/compatibility'
 
 
-Mongoid::Config.connect_to('mongoid-rspec-test')
+Mongoid::Config.connect_to('mongoid-rspec-test') if Mongoid::Compatibility::Version.mongoid3_or_newer?
 Mongo::Logger.logger.level = ::Logger::INFO if Mongoid::Compatibility::Version.mongoid5_or_newer?
 
 Dir[ File.join(MODELS, "*.rb") ].sort.each { |file| require File.basename(file) }
@@ -25,7 +25,7 @@ require 'mongoid-rspec'
 
 RSpec.configure do |config|
   config.include RSpec::Matchers
-  config.include Mongoid::Matchers
+config.include Mongoid::Matchers
   config.mock_with :rspec
   config.after :all do
     Mongoid::Config.purge!
