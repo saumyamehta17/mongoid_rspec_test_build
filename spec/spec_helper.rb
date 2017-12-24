@@ -17,7 +17,8 @@ require 'mongoid/compatibility'
 
 
 Mongoid::Config.connect_to('mongoid-rspec-test')
-Mongo::Logger.logger.level = ::Logger::INFO if Mongoid::Compatibility::Version.mongoid5_or_newer?
+# Mongo::Logger.logger.level = ::Logger::INFO
+Mongoid::Logger.logger.level = ::Logger::INFO
 
 Dir[ File.join(MODELS, "*.rb") ].sort.each { |file| require File.basename(file) }
 
