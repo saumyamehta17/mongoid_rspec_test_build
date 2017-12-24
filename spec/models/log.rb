@@ -1,8 +1,8 @@
 class Log
   include Mongoid::Document
   include Mongoid::Timestamps
-
-  if Mongoid::Compatibility::Version.mongoid4_or_newer?
+  
+  if Mongoid::Compatibility::Version.mongoid3_or_newer?
     include Mongoid::Attributes::Dynamic
   end
 
