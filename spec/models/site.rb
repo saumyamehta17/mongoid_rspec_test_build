@@ -3,7 +3,7 @@ class Site
 
   field :name
 
-  if Mongoid::Compatibility::Version.mongoid7_or_newer?
+  if Mongoid::Compatibility::Version.mongoid3_or_newer?
     has_many :users, inverse_of: :site, order: :email.desc, counter_cache: true
   else
     has_many :users, inverse_of: :site, order: :email.desc
