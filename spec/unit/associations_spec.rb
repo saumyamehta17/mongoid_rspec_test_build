@@ -39,8 +39,8 @@ RSpec.describe "Associations" do
   end
 
   describe Site do
-    if Mongoid::Compatibility::Version.mongoid6_or_newer?
+    # if Mongoid::Compatibility::Version.mongoid6_or_newer?
       it { is_expected.to have_many(:users).as_inverse_of(:site).ordered_by(:email.desc).with_counter_cache }
-    end
+    # end
   end
 end
