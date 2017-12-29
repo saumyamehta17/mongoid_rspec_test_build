@@ -1,6 +1,6 @@
-module Mongoid3
+module Mongoid
   module Matchers
-    class HaveIndexForMatcher # :nodoc:
+    class HaveIndexForMongoid3 # :nodoc:
       def initialize(index_fields)
         @index_fields = index_fields.symbolize_keys!
       end
@@ -78,7 +78,7 @@ module Mongoid3
     end
 
     def have_index_for(index_fields)
-      HaveIndexForMatcher.new(index_fields)
+      HaveIndexForMatcherMongoid3.new(index_fields)
     end
   end
 end
