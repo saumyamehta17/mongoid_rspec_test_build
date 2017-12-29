@@ -38,7 +38,6 @@ matrix:
     - rvm: 2.4.0
     - rvm: ruby-head
     - rvm: jruby-head
-    - env: MONGOID_VERSION=HEAD
 before_install:
   - gem update --system
   - gem update bundler

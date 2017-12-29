@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-if Mongoid::Compatibility::Version.mongoid4_or_newer?
-  index_module = Mongoid::Matchers::HaveIndexFor
-else
+if Mongoid::Compatibility::Version.mongoid3_or_older?
   index_module = Mongoid::Matchers::HaveIndexForMongoid3
+else
+  index_module = Mongoid::Matchers::HaveIndexFor
 end  
 RSpec.describe index_module do
   subject do
