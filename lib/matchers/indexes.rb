@@ -78,7 +78,7 @@ module Mongoid
     end
 
     def have_index_for(index_fields)
-      HaveIndexForMatcherMongoid3.new(index_fields)
+      HaveIndexForMongoid3.new(index_fields)
     end
   end
 end
