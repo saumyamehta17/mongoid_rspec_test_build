@@ -32,15 +32,13 @@ matrix:
         - MONGOID_VERSION=3
     - rvm: 2.3.1
       env:
-        - MONGOID_VERSION=2
-    - rvm: 2.3.1
-      env:
         - MONGOID_VERSION=HEAD
     - rvm: 2.3.0
   allow_failures:
     - rvm: 2.4.0
     - rvm: ruby-head
     - rvm: jruby-head
+    - env: MONGOID_VERSION=HEAD
 before_install:
   - gem update --system
   - gem update bundler
