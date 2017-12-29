@@ -26,6 +26,7 @@ require 'mongoid-rspec'
 RSpec.configure do |config|
   config.include RSpec::Matchers
   config.include Mongoid::Matchers
+  config.include Mongoid3::Matchers
   config.mock_with :rspec
   config.after :all do
     Mongoid::Config.purge!
