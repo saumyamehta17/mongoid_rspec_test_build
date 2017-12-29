@@ -3,7 +3,11 @@ class Site
 
   field :name
 
-  has_many :users, inverse_of: :site, order: :email.desc, counter_cache: true
+  if Mongoid::Compatibility::Version.mongoid3_or_newer?
+    has_many :users, inverse_of: :site, order: :email.desc, counter_cache: true
+  else
+    has_many :users, inverse_of: :site, order: :email.desc
+  end  
 
   validates :name, presence: true, uniqueness: true
 end
