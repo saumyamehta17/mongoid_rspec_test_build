@@ -12,21 +12,21 @@ matrix:
     - rvm: 2.3.1
       script:
         - bundle exec danger
-    - rvm: 2.4.0
-      env:
-        - MONGOID_VERSION=7
-    - rvm: 2.4.0
-      env:
-        - MONGOID_VERSION=6
-    - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=6
-    - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=5
-    - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=4
+    # - rvm: 2.4.0
+    #   env:
+    #     - MONGOID_VERSION=7
+    # - rvm: 2.4.0
+    #   env:
+    #     - MONGOID_VERSION=6
+    # - rvm: 2.3.1
+    #   env:
+    #     - MONGOID_VERSION=6
+    # - rvm: 2.3.1
+    #   env:
+    #     - MONGOID_VERSION=5
+    # - rvm: 2.3.1
+    #   env:
+    #     - MONGOID_VERSION=4
     - rvm: 2.3.1
       env:
         - MONGOID_VERSION=3
