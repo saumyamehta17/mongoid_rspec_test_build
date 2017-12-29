@@ -5,7 +5,7 @@ if Mongoid::Compatibility::Version.mongoid3?
 else
   index_module = Mongoid::Matchers::HaveIndexFor
 end  
-RSpec.describe index_module do
+RSpec.describe Mongoid::Matchers::HaveIndexFor do #index_module do
   subject do
     Class.new do
       include Mongoid::Document
