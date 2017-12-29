@@ -14,7 +14,11 @@ class User
   has_many :articles, foreign_key: :author_id, order: :title
   has_many :comments, dependent: :destroy, autosave: true
   has_and_belongs_to_many :children, class_name: "User"
-  has_one :record, autobuild: true, inverse_of: :user
+  if Mongoid::Compatibility::Version.mongoid2_or_older?
+    has_one :record, inverse_of: :user
+  else
+    has_one :record, autobuild: true, inverse_of: :user
+  end  
 
   embeds_one :profile, inverse_of: :user
 
