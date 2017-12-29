@@ -30,7 +30,7 @@ require 'matchers/be_dynamic_document'
 require 'matchers/be_stored_in'
 require 'matchers/have_field'
 require 'matchers/have_index_for'
-require 'matchers/indexes'
+# require 'matchers/indexes'
 require 'matchers/have_timestamps'
 
 module Mongoid
