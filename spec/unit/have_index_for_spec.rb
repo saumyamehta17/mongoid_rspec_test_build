@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 if Mongoid::Compatibility::Version.mongoid3?
-  index_module = Mongoid::Matchers::HaveIndexForMongoid3
+  index_module = Mongoid::Matchers::HaveIndexFor #HaveIndexForMongoid3
 else
   index_module = Mongoid::Matchers::HaveIndexFor
 end  
