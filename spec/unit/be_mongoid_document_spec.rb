@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+return unless Mongoid::Compatibility::Version.mongoid4_or_newer?
 RSpec.describe Mongoid::Matchers::BeMongoidDocument do
   context 'when model does\'t include Mongoid::Attributes::Dynamic' do
     subject do

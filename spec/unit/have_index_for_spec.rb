@@ -46,6 +46,6 @@ RSpec.describe index_module do
 
   it 'detect an index for aliased fields' do
     is_expected.to have_index_for(fizz: 1)
-    is_expected.to have_index_for(buzz: 1)
+    is_expected.to have_index_for(buzz: 1) if Mongoid::Compatibility::Version.mongoid3_or_older?
   end
 end
