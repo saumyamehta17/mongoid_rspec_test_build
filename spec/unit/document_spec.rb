@@ -6,7 +6,7 @@ RSpec.describe "Document" do
   end
 
   describe Article do
-    klass_boolean = Mongoid::Compatibility::Version.mongoid4_or_newer? ? Mongoid::Boolean : Mongoid::Extensions::Boolean
+    klass_boolean = Mongoid::Compatibility::Version.mongoid4_or_newer? ? Mongoid::Boolean : Boolean
     it { is_expected.to have_field(:published).of_type(klass_boolean).with_default_value_of(false) }
     it { is_expected.to have_field(:allow_comments).of_type(klass_boolean).with_default_value_of(true) }
     it { is_expected.to belong_to(:author) }
