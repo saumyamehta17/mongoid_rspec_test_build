@@ -5,16 +5,7 @@ module Mongoid
       HaveIndexFor.new(index_fields)
     end
 
-    class HaveIndexFor #< Mongoid::Matchers::Base::HaveIndexFor
-
-      def initialize(index_fields)
-        @index_fields = index_fields.symbolize_keys!
-      end
-
-      def with_options(options = { })
-        @options = options
-        self
-      end
+    class HaveIndexFor < Mongoid::Matchers::Base::HaveIndexFor
 
       def matches?(klass)
         @klass  = klass.is_a?(Class) ? klass : klass.class
