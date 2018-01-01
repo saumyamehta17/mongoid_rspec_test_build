@@ -30,9 +30,9 @@ require 'matchers/be_dynamic_document'
 require 'matchers/be_stored_in'
 require 'matchers/have_field'
 if Mongoid::Compatibility::Version.mongoid4_or_newer?
-  require 'matchers/have_index_for'
+  require 'matchers/indexes/v4/have_index_for'
 else
-  require 'matchers/indexes'
+  require 'matchers/indexes/v3/have_index_for'
 end  
 require 'matchers/have_timestamps'
 
