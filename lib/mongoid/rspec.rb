@@ -29,6 +29,7 @@ require 'matchers/be_mongoid_document'
 require 'matchers/be_dynamic_document'
 require 'matchers/be_stored_in'
 require 'matchers/have_field'
+require 'matchers/indexes/have_index_for'
 if Mongoid::Compatibility::Version.mongoid4_or_newer?
   require 'matchers/indexes/v4/have_index_for'
 else
