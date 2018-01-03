@@ -20,5 +20,5 @@ else
 end
 
 group :test do
-  gem 'mongoid-danger', '~> 0.1.1', require: false
+  # gem 'mongoid-danger', '~> 0.1.1', require: false
 end
